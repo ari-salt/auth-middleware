@@ -2,7 +2,7 @@
     "name": "ari-salt/auth-middleware",
     "description": "A Laravel/Lumen middleware to authorize requests using CIAM ForgeRock.",
     "type": "library",
-    "license": "proprietary",
+    "license": "MIT",
     "autoload": {
         "psr-4": {"AriSALT\\AuthMiddleware\\": "src/AuthMiddleware/"}
     },
