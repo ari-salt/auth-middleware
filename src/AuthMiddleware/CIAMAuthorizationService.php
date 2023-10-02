@@ -13,11 +13,11 @@ use Firebase\JWT\JWT;
 
 class CIAMAuthorizationService implements AuthorizationService
 {
-	private string $userID;
-	private string $pemPublicKey;
-	private Client $http;
-	private CIAMConfig $ciamConfig;
-	private JWKConverter $jwkConverter;
+	private $userID;
+	private $pemPublicKey;
+	private $http;
+	private $ciamConfig;
+	private $jwkConverter;
 
 	public function __construct(
 		string $pemPublicKey,

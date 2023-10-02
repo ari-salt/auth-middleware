@@ -4,13 +4,13 @@ namespace AriSALT\AuthMiddleware;
 
 class CIAMConfig
 {
-	private string $algorithm;
-	private int $cacheExpirationHours;
-	private string $clientID;
-	private array $eligibleAudiences;
-	private array $eligibleIIS;
-	private string $host;
-	private int $httpTimeout;
+	private $algorithm;
+	private $cacheExpirationHours;
+	private $clientID;
+	private $eligibleAudiences;
+	private $eligibleIIS;
+	private $host;
+	private $httpTimeout;
 
 	public function __construct(
 		string $algorithm,
