@@ -12,7 +12,7 @@
         "codercat/jwk-to-pem": "^0.0.3",
         "guzzlehttp/guzzle": "^6.5.3",
         "firebase/php-jwt": "^v5.2.0",
-        "ari-salt/logger": "^1.0.0"
+        "ari-salt/logger": "^1.0.1"
     },
     "authors": [
         {
