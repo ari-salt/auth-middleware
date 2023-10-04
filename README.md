@@ -7,7 +7,7 @@ $ composer require ari-salt/auth-middleware
 ```
 
 ## Usage
-Add these environments to your app. `CIAM_AUDIENCES` and `CIAM_IIS` are arrays of strings separated by commas.
+Add these environments to your app. `CIAM_AUDIENCES` and `CIAM_ISS` are arrays of strings separated by commas.
 ```
 CIAM_ALGORITHM=""
 CIAM_AUDIENCES=""
@@ -15,7 +15,7 @@ CIAM_CACHE_EXPIRATION_HOURS=24
 CIAM_CLIENT_ID=""
 CIAM_HOST=""
 CIAM_HTTP_TIMEOUT=3
-CIAM_IIS=""
+CIAM_ISS=""
 PEM_PUBLIC_KEY=""
 ```
 Register middlewares to the routes.

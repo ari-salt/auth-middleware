@@ -42,7 +42,7 @@ class AuthOnlineMiddleware
 					(int) env('CIAM_CACHE_EXPIRATION_HOURS'),
 					env('CIAM_CLIENT_ID'),
 					explode(',', env('CIAM_AUDIENCES')),
-					explode(',', env('CIAM_IIS')),
+					explode(',', env('CIAM_ISS')),
 					env('CIAM_HOST'),
 					(int) env('CIAM_HTTP_TIMEOUT')
 				)

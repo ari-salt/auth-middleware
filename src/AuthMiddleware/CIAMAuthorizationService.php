@@ -51,8 +51,8 @@ class CIAMAuthorizationService implements AuthorizationService
 		});
 		$pem = $this->jwkConverter->toPEM((array) $jwkKey);
 		$decoded = JWT::decode($token, $pem, [$this->ciamConfig->algorithm()]);
-		if (!in_array($decoded->iss, $this->ciamConfig->eligibleIIS())) {
-			throw new CIAMException('IIS not eligible');
+		if (!in_array($decoded->iss, $this->ciamConfig->eligibleISS())) {
+			throw new CIAMException('ISS not eligible');
 		}
 		if (!in_array($decoded->aud, $this->ciamConfig->eligibleAudiences())) {
 			throw new CIAMException('audience not allowed');

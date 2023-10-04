@@ -8,7 +8,7 @@ class CIAMConfig
 	private $cacheExpirationHours;
 	private $clientID;
 	private $eligibleAudiences;
-	private $eligibleIIS;
+	private $eligibleISS;
 	private $host;
 	private $httpTimeout;
 
@@ -17,7 +17,7 @@ class CIAMConfig
 		int $cacheExpirationHours,
 		string $clientID,
 		array $eligibleAudiences,
-		array $eligibleIIS,
+		array $eligibleISS,
 		string $host,
 		int $httpTimeout
 	) {
@@ -25,7 +25,7 @@ class CIAMConfig
 		$this->cacheExpirationHours = $cacheExpirationHours;
         $this->clientID = $clientID;
         $this->eligibleAudiences = $eligibleAudiences;
-        $this->eligibleIIS = $eligibleIIS;
+        $this->eligibleISS = $eligibleISS;
         $this->host = $host;
 		$this->httpTimeout = $httpTimeout;
 	}
@@ -46,8 +46,8 @@ class CIAMConfig
         return $this->eligibleAudiences;
     }
 
-	public function eligibleIIS(): array {
-        return $this->eligibleIIS;
+	public function eligibleISS(): array {
+        return $this->eligibleISS;
     }
 
 	public function host(): string {
@@ -64,7 +64,7 @@ class CIAMConfig
 			empty($this->cacheExpirationHours) ||
             empty($this->clientID) ||
             empty($this->eligibleAudiences) ||
-            empty($this->eligibleIIS) ||
+            empty($this->eligibleISS) ||
             empty($this->host) ||
 			empty($this->httpTimeout)
 		) {
