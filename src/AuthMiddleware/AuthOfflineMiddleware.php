@@ -63,13 +63,13 @@ class AuthOfflineMiddleware
 			Logger::logging($logTitle, $logFilename, $e->getMessage());
 			return response()->json([
 				'status' => false,
-				'code' => 'AUTH500',
+				'code' => 'AUTH422',
 				'message' => null,
 				'errorMessage' => [
 					'token' => [$e->getMessage()]
 				],
 				'data' => null
-			], Response::HTTP_INTERNAL_SERVER_ERROR);
+			], Response::HTTP_UNPROCESSABLE_ENTITY);
 		}
 
 		$request->request->add([
